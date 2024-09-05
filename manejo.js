@@ -528,8 +528,12 @@ async function tablaModificarDatos(){
         }else if (puestoGuardado === ""){
             if(verificarPlacaExistente(parqueados, placaGuardada)){
                 console.log("Encontro PLACA");
-                encontradoModificar = parqueados.find(vehiculo=>vehiculo.placa === placaGuardada);
-                modificar = infoModificar (nuevaPlaca,nuevoTipo,encontradoModificar);
+                if(!verificarPlacaExistente(parqueados, nuevaPlaca)){
+                    encontradoModificar = parqueados.find(vehiculo=>vehiculo.placa === placaGuardada);
+                    modificar = infoModificar (nuevaPlaca,nuevoTipo,encontradoModificar);
+                }else{
+                    alert("La placa ya existe");
+                }
             }else{
                 alert("La placa no existe");
             }

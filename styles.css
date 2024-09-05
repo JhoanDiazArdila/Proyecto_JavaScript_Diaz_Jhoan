@@ -551,7 +551,7 @@ div.advertencia_celular img{
         display: none;}
 }
 
-@media (max-width:1000px){
+@media (max-width:1200px){
     .grid{
         display: grid;
         grid-template-columns: .7fr 1.3fr;
@@ -600,5 +600,10 @@ div.advertencia_celular img{
     }
 }
 
-
+@media (min-width:1400px){
+    form input[type="submit"] {
+        
+        left: 12vw;
+    }
+}
 
